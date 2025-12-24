@@ -654,11 +654,19 @@ h1 {
     /* MOVE DONATION CARD DOWN (Cadre 1) */
     .details-section {
         order: 3 !important;
-        margin-top: 6rem;
-        /* Huge gap to push card down as requested */
+        margin-top: 5rem;
+        /* Balanced gap */
         width: 100%;
         max-width: 100%;
         align-items: center;
+    }
+
+    .details-section h2 {
+        font-size: 1.6rem !important;
+        white-space: nowrap !important;
+        /* Force single line */
+        width: 100%;
+        text-align: center;
     }
 
     .email-value {
