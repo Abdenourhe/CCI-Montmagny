@@ -21,8 +21,8 @@ body {
     background-color: var(--bg-dark);
     color: var(--text-white);
     min-height: 100vh;
-    overflow: hidden;
-    /* Prevent scroll for fixed layout feel */
+    overflow-x: hidden;
+    /* Prevent horizontal scroll while allowing vertical scrolling */
     display: flex;
     flex-direction: column;
 }
@@ -546,9 +546,62 @@ h1 {
     .main-layout {
         flex-direction: column;
         height: auto;
-        padding-bottom: 10rem;
-        /* Increased for mobile overlap */
+        padding: 4rem 1.5rem 12rem 1.5rem;
+        /* Balanced padding for mobile */
         overflow-y: auto;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        /* Smaller font for mobile */
+    }
+
+    .left-stats-column {
+        margin-top: 2rem;
+        gap: 1.5rem;
+        width: 100%;
+        align-items: center;
+    }
+
+    .stat-box {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .hero-section {
+        margin-top: 2rem;
+    }
+
+    .progress-ring-container {
+        width: 260px;
+        height: 260px;
+        margin-bottom: 2rem;
+    }
+
+    .progress-ring {
+        width: 260px;
+        height: 260px;
+    }
+
+    .progress-ring circle {
+        r: 105;
+        cx: 130;
+        cy: 130;
+    }
+
+    .progress-text .amount {
+        font-size: 2.8rem;
+    }
+
+    .details-section {
+        margin-top: 2rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .marquee-content p {
+        font-size: 1.4rem;
+        /* Smaller marquee text for mobile */
     }
 
     body {
