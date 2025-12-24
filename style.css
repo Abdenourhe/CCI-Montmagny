@@ -555,9 +555,10 @@ h1 {
         flex-direction: column;
         align-items: center;
         height: auto;
-        padding: 2rem 1rem 20rem 1rem;
-        /* Huge bottom padding to avoid marquee overlap */
-        gap: 2.5rem;
+        padding: 2rem 1rem 12rem 1rem;
+        /* Minimized bottom padding */
+        gap: 1.5rem;
+        /* Balanced component gap */
         min-height: auto;
     }
 
@@ -571,7 +572,8 @@ h1 {
 
     .left-stats-column {
         order: 2 !important;
-        margin: 0;
+        margin-top: 1rem;
+        /* Minimized vertical gap */
         width: 100%;
         max-width: 380px;
         gap: 1rem;
@@ -580,7 +582,8 @@ h1 {
 
     .details-section {
         order: 3 !important;
-        margin: 0;
+        margin-top: 2.5rem;
+        /* Professional separation */
         width: 100%;
         max-width: 100%;
         align-items: center;
