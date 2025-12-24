@@ -545,63 +545,85 @@ h1 {
 @media (max-width: 900px) {
     .main-layout {
         flex-direction: column;
+        align-items: center;
+        /* Center all columns */
         height: auto;
-        padding: 4rem 1.5rem 12rem 1.5rem;
-        /* Balanced padding for mobile */
+        padding: 3rem 1rem 15rem 1rem;
+        /* More space at bottom for marquee */
+        gap: 4rem;
+        /* Big gaps between sections */
         overflow-y: auto;
     }
 
-    h1 {
-        font-size: 2.2rem;
-        /* Smaller font for mobile */
+    /* REORDERING FOR MOBILE */
+    .hero-section {
+        order: 1;
+        /* Name & Circle TOP */
+        width: 100%;
+        margin-top: 0;
     }
 
     .left-stats-column {
-        margin-top: 2rem;
-        gap: 1.5rem;
+        order: 2;
+        /* Stats SECOND */
+        margin-top: 0;
         width: 100%;
+        max-width: 350px;
+        gap: 1.5rem;
         align-items: center;
+    }
+
+    .details-section {
+        order: 3;
+        /* Card BOTTOM */
+        margin-top: 0;
+        width: 100%;
+        max-width: 440px;
+        align-items: center;
+    }
+
+    /* TYPOGRAPHY & ELEMENTS */
+    h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
     }
 
     .stat-box {
         width: 100%;
-        max-width: 320px;
-    }
-
-    .hero-section {
-        margin-top: 2rem;
+        text-align: center;
+        border-left: none;
+        border-bottom: 3px solid var(--primary-gold);
+        padding: 1rem 0;
     }
 
     .progress-ring-container {
-        width: 260px;
-        height: 260px;
-        margin-bottom: 2rem;
+        width: 250px;
+        height: 250px;
+        margin: 2rem auto;
     }
 
     .progress-ring {
-        width: 260px;
-        height: 260px;
+        width: 250px;
+        height: 250px;
     }
 
     .progress-ring circle {
-        r: 105;
-        cx: 130;
-        cy: 130;
+        r: 100;
+        cx: 125;
+        cy: 125;
     }
 
     .progress-text .amount {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
     }
 
-    .details-section {
-        margin-top: 2rem;
-        width: 100%;
-        max-width: 100%;
+    .fixed-expenses-box {
+        justify-content: center;
+        text-align: left;
     }
 
     .marquee-content p {
-        font-size: 1.4rem;
-        /* Smaller marquee text for mobile */
+        font-size: 1.3rem;
     }
 
     body {
